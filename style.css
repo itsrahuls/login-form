@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif; 
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    background: url(./mountain.jpg)no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container {
+    width: 400px;
+    height: 500px; 
+
+    background-color: rgba(255, 255, 255, 0.12); /* lighter glass, not pure black */
+    backdrop-filter: blur(20px);                  /* stronger blur = more separation from bg */
+    -webkit-backdrop-filter: blur(20px);
+
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.5);    /* brighter edge = clearer outline */
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.6),              /* stronger drop shadow lifts it off bg */
+        0 0 60px rgba(77, 208, 255, 0.15);           /* subtle glow ring in accent color */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+h2 {
+    color: #4dd0ff;
+    text-transform: uppercase;
+    font-size: 2.2em;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-align: center;
+
+    margin: 10px 0 30px;
+
+
+}
+.form-group {
+    position:relative;
+    
+    width: 330px;
+    border-bottom: 3px solid #fff;
+    margin: 30px 0;
+}
+.form-group input {
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    
+    font-size: 1.2em;
+    color:#fff;
+    padding: 0 30px 0 10px;
+
+}
+.form-group label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    color:#fff;
+    transition: 0.5s;
+}
+input:focus ~ label,
+input:valid ~ label {
+    top: -5px;
+}
+p{
+    text-align: center;
+    color:#fff;
+    padding: 10px 0;
+}
+p>a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+
+}
+P>a:hover {
+    text-decoration: underline;
+    font-style: italic;
+}
+#btn {
+    width: 100%;
+    height: 50px;
+    border-radius: 40px;
+    border: none;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 15px 0 10px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #4dd0ff, #0077b6);
+    color: #fff;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 119, 182, 0.4);
+}
+#btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 119, 182, 0.6);
+}
+#btn:active {
+    transform: translateY(0);
+}
+
+.form-group:focus-within {
+    border-bottom: 3px solid #4dd0ff; /* accent color on active field */
+}
+
+.container {
+    animation: fadeInUp 0.6s ease;
+}
+
